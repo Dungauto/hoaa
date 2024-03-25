@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Món quà nho nhỏ</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function() {
+            alert("Tui có cap ảnh str bà làm web tặng bà ấy nên tui xin phép nhé!");
+        };
+        </script>
+</head>
+
+<body>
+
+    <div class="gift-container">
+        <div class="gift" onclick="openCard(0)">
+            <img src="gift2.png" alt="Gift 1">
+            <audio id="audio0">
+                <source src="1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(1)">
+            <img src="gift2.png" alt="Gift 2">
+            <audio id="audio1">
+                <source src="2SilentOpen-Cagnet-2673230.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(2)">
+            <img src="gift2.png" alt="Gift 3">
+            <audio id="audio2">
+                <source src="3.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(3)">
+            <img src="gift2.png" alt="Gift 4">
+            <audio id="audio3">
+                <source src="i do.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(4)">
+            <img src="gift2.png" alt="Gift 5">
+            <audio id="audio4">
+                <source src="11Gio-Noi-Roi-Tieu-Uc-Tinh.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(5)">
+            <img src="gift2.png" alt="Gift 6">
+            <audio id="audio5">
+                <source src="Nothings gonna change my love for you  Vietsub  Westlife.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(6)">
+            <img src="gift2.png" alt="Gift 7">
+            <audio id="audio6">
+                <source src="Proud Of You  Fiona Fung Lyrics  Vietsub.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(7)">
+            <img src="gift2.png" alt="Gift 8">
+            <audio id="audio7">
+                <source src="Sau lời từ khước OST MAI  Phan Mạnh Quỳnh  Lyrics video.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(8)">
+            <img src="gift2.png" alt="Gift 9">
+            <audio id="audio8">
+                <source src="Passenger  Let Her Go Official Video.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(9)">
+            <img src="gift2.png" alt="Gift 10">
+            <audio id="audio9">
+                <source src="Đường Tôi Chở Em Về  buitruonglinh  Lyrics Video .mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(10)">
+            <img src="gift2.png" alt="Gift 11">
+            <audio id="audio10">
+                <source src="THẰNG ĐIÊN  JUSTATEE x PHƯƠNG LY  OFFICIAL MV.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="gift" onclick="openCard(11)">
+            <img src="gift2.png" alt="Gift 12">
+            <audio id="audio11">
+                <source src="12Cause-I-Love-You-Noo-Phuoc-Thinh.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="11.jpg" alt="Hoa">
+        </div>
+    </div>
+
+    <div class="card-overlay" id="overlay">
+        <div class="card" id="card">
+            <span class="close" onclick="closeCard()">&times;</span>
+            <h2>For you</h2>
+            <p id="card-content"></p>
+            <div class="message">
+                <a href="https://www.facebook.com/messages/t/100015156520416" target="_blank">
+                    <p style="font-size: 15px; ">Nhắn cho tui ở đây!!! </p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var cardContent = [
+            {
+                stt: "[1]",
+                message: "Yêu cầu đồng chí tắt điện thoại"
+                    + "<br> Lên giường, đắp chăn, đi ngủ"
+                    + "<br> Ngủ ngon nhá >>",
+                image: "sleep.gif"
+            },
+            {
+                stt: "[2]",
+                message: "Đố bà biết bài này trong phim nào?"
+                    +"<br>Silent Open"
+                    + "<br>- Cagnet -",
+                image: "11.jpg"
+            },
+            {
+                stt: "[3]",
+                message: "Happy Birthday to you"
+                    + "<br> Bà cười cute v~, tuổi mới nhiều niềm vui nhé!",
+                image: "12.jpg"
+            },
+            {
+                stt: "[4]",
+                message:"Tháng 4<br>"
+                    + "<br>I Do"
+                    + "<br>- 911 -", 
+                image: "12.gif"
+            },
+            {
+                stt: "[5]",
+                message:"Tháng 5<br>"
+                    + "<br> Gió nổi rồi"
+                    + "<br>- Tiêu Ức Tĩnh -",
+                image: "7.gif"
+            },
+            {
+                stt: "[6]",
+                message:"Tháng 6 bớt cáu bẩn :D<br>"
+                    + "<br>Nothing's gonna change my love for you"
+                    + "<br>- Westlife -",
+                image: "21.gif"
+            },
+            {
+                stt: "[7]",
+                message:"Tháng 7 <br>"
+                    + "<br>Proud Of You"
+                    + "<br>- Fiona Fung -",
+                image: "32.gif"
+            },
+            {
+                stt: "[8]",
+                message:"Tháng 8<br>"
+                    + "<br>Sau lời từ khước"
+                    + "<br>- Phan Mạnh Quỳnh -",
+                image: "23.gif"
+            },
+            {
+                stt: "[9]",
+                message:"Tháng 9<br>"
+                    + "<br> Let Her Go"
+                    + "<br>- Passenger -", 
+                image: "30.gif"
+            },
+            {
+                stt: "[10]",
+                message:"Tháng 10<br>"
+                    + "<br>Đường Tôi Chở Em Về"
+                    + "<br>- buitruonglinh -",
+                image: "15.gif"
+            },
+            {
+                stt: "[11]",
+                message:"Tháng 11<br>"
+                    + "<br>THẰNG ĐIÊN"
+                    + "<br>- JUSTATEE x PHƯƠNG LY -",
+                image: "10.gif"
+            },
+            {
+                stt: "[12]",
+                message:"Tháng 12<br>"
+                    + "<br>Cause I Love You"
+                    + "<br>- Noo Phước Thịnh -",
+                image: "16.gif"
+            },
+        ];
+        var lastPlayedAudio = null;
+
+        function openCard(index) {
+            var overlay = document.getElementById("overlay");
+            var card = document.getElementById("card");
+            var content = document.getElementById("card-content");
+            var image = document.createElement("img");
+
+            content.innerHTML = "Hộp nhạc số " + cardContent[index].stt;
+            overlay.style.display = "block";
+
+            // Tạo thẻ hình ảnh và thiết lập thuộc tính src và alt
+            image.src = cardContent[index].image;
+            image.alt = "Hình ảnh quà số " + (index + 1);
+            // Thêm lớp CSS mới cho hình ảnh
+            image.classList.add("card-image");
+
+            // Tạo thẻ p để hiển thị thông điệp và thiết lập nội dung
+            var message = document.createElement("p");
+            message.innerHTML = cardContent[index].message;
+
+            // Thêm thông điệp vào nội dung của thẻ card
+            content.appendChild(message);
+
+            // Thêm hình ảnh vào nội dung của thẻ card
+            content.appendChild(image);
+
+            // Hiển thị overlay và thẻ card
+            overlay.classList.add("open");
+
+
+            var audio = document.getElementById("audio" + index);
+            audio.play();
+            if (lastPlayedAudio !== null) {
+                lastPlayedAudio.pause();
+                lastPlayedAudio.currentTime = 0;
+            }
+            lastPlayedAudio = audio;
+        }
+
+        function closeCard() {
+            var overlay = document.getElementById("overlay");
+            overlay.style.display = "none";
+            if (lastPlayedAudio !== null) {
+                lastPlayedAudio.pause();
+                lastPlayedAudio.currentTime = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
